@@ -38,3 +38,22 @@ var calcRetirement = (birthYear) => {
 
 calcRetirement(1994)
 
+// Array 
+const arr = new Array(0, 15, 2 , 50, 80, 20, 155, 13, 2 , 100);
+let var1, var2, temp;
+console.log(`The array lenth ${arr.length}`);
+
+//arr.sort(function(a, b){return a-b});
+for(let i=0; i<arr.length-1; i++){
+   
+    for (let j=i; j<arr.length-i-1; j++){
+        if(arr[j] > arr[j+1]){
+            temp = arr[j];
+            arr[j]= arr[j+1];
+            arr[j+1] = temp;
+        }
+        //var1 = arr[i];
+
+    }
+}
+console.log(`Updated Array: ${arr}`);
