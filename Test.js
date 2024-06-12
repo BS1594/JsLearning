@@ -72,3 +72,37 @@ console.log(jonas.calcAge(1994));
 for (let key in jonas){
   console.log(key, typeof jonas[key]);
 }
+
+// Class
+
+const person = class employee {
+    constructor(name, age){
+      this.name = name;
+      this.age = age;
+      console.log(name, age);
+    }
+}
+const person1 = new person ('salehin', 23)
+
+// Rest parameter function
+// the three dots ahead of the parameter works like array
+
+function print (a, b, ...c){
+  console.log(`A parameter value ${a} and B parameter value ${b}`);
+  console.log(`C parameter value ${c}`);
+
+}
+
+print(12, 23, ' Salehin ', ' Nazib ', ' Marjuk '); 
+
+function maxAge(){
+  let max = 0;
+  for(let i=0; i< arguments.length; i++){
+      if (arguments[i] > max){
+          max = arguments[i];
+      }
+  }
+  return max;
+}
+
+console.log(maxAge(20, 55, 15, 19, 45, 60, 79));
